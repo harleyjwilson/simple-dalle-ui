@@ -17,7 +17,7 @@ export default function Home() {
     event.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("/image-gen/api/generate", {
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,11 +51,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Vectura.ai - simple DALL-E3 FrontEnd</title>
-        <link rel="icon" href="/image-gen/vai-dalle-gen-icon.png" />
+        <link rel="icon" href="/vai-dalle-gen-icon.png" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/image-gen/vai-dalle-gen.png" className={styles.icon} />
+        <img src="/vai-dalle-gen.png" className={styles.icon} />
         <h4>Vectura.ai - simple DALL-E FrontEnd</h4>
         <form onSubmit={onSubmit}>
           <a href="#" onClick={() => setAdvancedSettingsVisible(!advancedSettingsVisible)}>Advanced settings</a>
